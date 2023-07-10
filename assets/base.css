@@ -75,6 +75,7 @@
 
 sticky-header > header > h1 > a > span {
   background-color: blue;
+  color: yellow;
 }
 
 .no-js:not(html) {
