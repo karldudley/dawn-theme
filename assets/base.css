@@ -80,6 +80,7 @@
   > a
   > span {
   background-color: blue;
+  color: yellow;
 }
 
 .no-js:not(html) {
