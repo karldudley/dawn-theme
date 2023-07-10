@@ -73,12 +73,7 @@
 
 /* base */
 
-#shopify-section-sections--19781518426395__header
-  > sticky-header
-  > header
-  > h1
-  > a
-  > span {
+sticky-header > header > h1 > a > span {
   background-color: blue;
 }
 
