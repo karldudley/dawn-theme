@@ -197,7 +197,7 @@
                 }}
               </div>
             {%- else -%}
-              <span class="h2">{{ shop.name }}1</span>
+              <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
@@ -504,6 +504,27 @@
     }
   </script>
 {%- endif -%}
+
+<script>
+  const query = `{
+                  shop {
+                    name
+                  }
+                }`;
+  function apiCall(query) {
+    return fetch('/api/graphql.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/graphql',
+        "Access-Control-Allow-Origin": "*",
+        'X-Shopify-Storefront-Access-Token': '39ead616890ea2af61a7f7e208dfbd23'
+      },
+      body: query
+      }).then(response => response.json());
+    }
+
+  apiCall(query).then(response => console.log(response));
+</script>
 
 {% schema %}
 {
